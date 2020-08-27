@@ -23,22 +23,25 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [  
-              "src/styles.css",  
-              "./node_modules/owl.carousel/dist/assets/owl.carousel.min.css",  
-               "./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"  
-            ],  
-            "scripts": 
-            ["./node_modules/jquery/dist/jquery.min.js",  
-              
-
-              
+            "styles": [
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "./node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery/jquery-2.2.4.min.js",
               "./node_modules/popper.js/dist/popper.min.js",
+              "src/assets/js/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/bootstrap.min.js",
               "src/assets/js/plugins.js",
               "src/assets/js/active.js",
-              "./node_modules/owl.carousel/dist/owl.carousel.min.js"
-          
+              "./node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "src/assets/js/nav-music-player.js",
+              "./node_modules/green-audio-player/dist/js/green-audio-player.js",
+              "src/assets/js/green-audio-player.js"
             ]
           },
           "configurations": {

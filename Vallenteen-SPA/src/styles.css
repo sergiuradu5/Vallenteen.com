@@ -20,13 +20,16 @@
 @import url(assets/css/magnific-popup.css);
 @import url(assets/css/font-awesome.min.css);
 @import url(assets/css/themify-icons.css);
+@import url(../node_modules/green-audio-player/dist/css/green-audio-player.css);
 /* :: Base CSS */
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif; 
+  background-color: #FFF8D3;
+}
 
 h1,
 h2,
@@ -69,7 +72,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #232323;
+  background-color: #FFF8D3;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -457,13 +460,13 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 80px;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   background-color: transparent;
-  padding: 15px 30px; }
+  padding: 15px 0px; }
   .header-area .logo-area a {
-    color: #ffffff;
+    color: #000;
     font-size: 36px;
     font-weight: 100; }
     @media only screen and (max-width: 767px) {
@@ -474,7 +477,7 @@ img {
     .header-area .menu-content-area .header-social-area a {
       font-size: 18px;
       padding: 0 10px;
-      color: #ffffff; }
+      color: #000; }
       @media only screen and (max-width: 767px) {
         .header-area .menu-content-area .header-social-area a {
           padding: 0 5px;
@@ -483,14 +486,17 @@ img {
       .header-area .menu-content-area .header-social-area {
         margin-right: 15px; } }
   .header-area.sticky {
-    background-color: #232323; }
+    background-color: #FFF;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+  }
   @media only screen and (max-width: 767px) {
     .header-area {
       padding: 10px 0; } }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  cursor: pointer; }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  cursor: pointer; 
+}
 
 .mainMenu {
   position: fixed;
@@ -498,7 +504,7 @@ img {
   height: 100%;
   top: 0;
   right: -500px;
-  background-color: #232323;
+  background-color: #FFFFFF;
   z-index: 99999;
   text-align: center;
   -webkit-box-orient: vertical;
@@ -514,7 +520,7 @@ img {
     right: 50px;
     top: 50px;
     z-index: 9;
-    color: #ffffff;
+    color: #000;
     font-size: 20px;
     cursor: pointer;
     -webkit-transition-duration: 750ms;
@@ -527,7 +533,7 @@ img {
         right: 30px;
         top: 30px; } }
   .mainMenu .logo-area a {
-    color: #ffffff;
+    color: #000;
     font-size: 30px;
     display: block;
     font-weight: 100; }
@@ -536,17 +542,17 @@ img {
         font-size: 24px; } }
   .mainMenu .copywrite-text p {
     margin-bottom: 0;
-    color: #ffffff; }
+    color: #000; }
     @media only screen and (max-width: 767px) {
       .mainMenu .copywrite-text p {
         font-size: 14px; } }
   .mainMenu .copywrite-text a {
     font-weight: 100;
-    color: #ffffff; }
+    color: #000; }
     .mainMenu .copywrite-text a:hover, .mainMenu .copywrite-text a:focus {
       font-size: 14px; }
   .mainMenu .nav-link {
-    color: #ffffff;
+    color: #000;
     font-size: 18px;
     position: relative;
     z-index: 1;
@@ -571,7 +577,7 @@ img {
       transition-duration: 500ms; }
     .mainMenu .nav-link:hover::after, .mainMenu .nav-link:focus::after {
       width: 70px;
-      background-color: white; }
+      background-color: black; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .mainMenu {
       padding: 30px 15px; } }
@@ -589,7 +595,7 @@ img {
 
 /* :: Hero Slides Area CSS */
 .hero-slides .single-hero-slide {
-  height: 950px;
+  height: 800px;
   position: relative;
   z-index: 1;
   padding: 0 40px 100px;
@@ -1464,3 +1470,6 @@ img {
 /* The end */
 
 /*# sourceMappingURL=style.css.map */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
