@@ -1,12 +1,12 @@
 <div class="player">
-	<div id="info" class="info">
-		<span class="artist">{{currentFile.file?.artist}}</span>
+	<div id="info" class="info" [ngClass]="{active: this.isPlaying}" >
+		<span class="artist"> {{currentFile.file?.artist}}</span>
 		<marquee #scrollingText direction="left" width="152" hspace="0" scrolldelay="96" truespeed="20" class="name">{{currentFile.file?.title}}</marquee>
 			<mat-slider type="range" min="1" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined" class="time-slider"> </mat-slider>
 			
 			
 	</div>
-	<div id="control-panel" class="control-panel">
+	<div id="control-panel" class="control-panel" [ngClass]="{active: this.isPlaying}">
 		<div id="album-art" class="album-art" [style.--album-art]=" this.url1 + currentFile?.file.coverArt.url + this.url2 | safeStyle "></div>
 		<div class="controls">
 			<div *ngIf="!isFirstPlaying()" class="prev" (click)="previous()" ></div>

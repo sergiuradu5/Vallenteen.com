@@ -20,13 +20,13 @@ body {
 
 	.info {
 		position: absolute;
-		height: 60px;
-		top: 5px;
+		height: 65px;
 		opacity: 0;
 		left: 10px;
 		right: 10px;
 		background-color: rgba(255, 255, 255, 0.5);
-		padding: 2px 15px 5px 25px;
+		box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
+		padding: 0px 15px 5px 25px;
 		border-radius: 15px;
 		transition: all 0.5s ease;
 
@@ -38,20 +38,21 @@ body {
 		.artist {
 			color: #222;
 			font-size: 16px;
-			margin-bottom: 5px;
+			margin-bottom: 4px;
 		}
 
 		.name {
 			color: #999;
 			font-size: 12px;
-			margin-bottom: 8px;
+			margin-bottom: 4px;
 		}
 
 		.time-slider {
 			height: 8px;
-			width: 32%;
+			width: 35%;
 			position: absolute;
-			bottom: 8px;
+			bottom: 16px;
+			left: 8px;
 
 		}
 		.progress-bar {
@@ -82,14 +83,14 @@ body {
 		background-color: #fff;
 		border-radius: 15px;
 		width: 300px;
-		height: 80px;
+		height: 65px;
 		z-index: 5;
 		box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
 
 		.album-art {
 			position: absolute;
 			left: 20px;
-			top: 5px;
+			top: -5px;
 			height: 80px;
 			width: 80px;
 			border-radius: 50%;
@@ -129,7 +130,7 @@ body {
 		}
 
 		&.active .album-art {
-			box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
 			transform: scale(1.2);
 			transition: all 0.5s ease;
 		}
@@ -153,7 +154,7 @@ body {
 		.controls {
 			display: flex;
 			justify-content: flex-end;
-			height: 80px;
+			height: 65px;
 			padding: 0 15px;
 
 			.prev,

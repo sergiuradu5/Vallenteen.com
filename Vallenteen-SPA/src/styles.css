@@ -20,14 +20,13 @@
 @import url(assets/css/magnific-popup.css);
 @import url(assets/css/font-awesome.min.css);
 @import url(assets/css/themify-icons.css);
-@import url(../node_modules/green-audio-player/dist/css/green-audio-player.css);
 /* :: Base CSS */
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: "Roboto", sans-serif; 
+  font-family: "Courier New", sans-serif; 
   background-color: #FFF8D3;
 }
 
@@ -62,6 +61,7 @@ a {
     font-weight: 400; }
 
 #preloader {
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,9 +422,9 @@ img {
 
 .slide-background-overlay {
   position: relative;
-  z-index: 1;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 60%; }
   .slide-background-overlay::after {
@@ -432,12 +432,16 @@ img {
     position: absolute;
     height: 60%;
     width: 100%;
-    z-index: -1;
+    z-index: -2;
     bottom: 0;
     left: 0;
+    right: 0;
     background: rgba(0, 0, 0, 0.9);
     background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 0) 100%); }
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 90%); }
+
+  
+     
 
 .grids {
   position: fixed;
@@ -594,29 +598,123 @@ img {
   right: 0; }
 
 /* :: Hero Slides Area CSS */
+.hero-slides {
+  overflow: visible !important;
+  position: relative !important;
+  z-index: -1 !important;
+  display: inline-block;
+}
+.hero-slides .hero-cosmic-latte {
+  position:"relative" !important;
+  overflow: visible !important;
+  z-index: 0 !important;
+}
+
+
 .hero-slides .single-hero-slide {
   height: 800px;
   position: relative;
-  z-index: 1;
-  padding: 0 40px 100px;
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
-  overflow: visible;
-  cursor: pointer; }
-  .hero-slides .single-hero-slide .hero-slides-content {
+  overflow: visible !important;
+  z-index: 1 !important;
+  cursor: pointer; 
+  clear: both;
+  background-image: var(--cover-art);
+  }
+
+  .hero-slides .hero-cosmic-latte-right {
+    position:"relative" !important;
+    overflow: visible !important;
+    z-index: 99 !important;
+  }
+  .hero-slides .single-hero-slide-right {
+    height: 800px;
+    min-width: auto;
     position: relative;
-    z-index: 1;
-    -webkit-transform: translateY(75%);
-    transform: translateY(75%);
+    padding-left: -50px;
     -webkit-transition-duration: 800ms;
     transition-duration: 800ms;
-    bottom: 0; }
-    .hero-slides .single-hero-slide .hero-slides-content .line {
+    overflow: visible !important;
+    z-index: 99 !important;
+    cursor: pointer; 
+    background-image: var(--cover-art);
+    }
+
+  .hero-slides .single-hero-slide .hero-slide-sticky-note {
+    height: 800px;
+    min-width: auto;
+    position: relative;
+    margin-left: -50px;
+    margin-right: -50px;
+    -webkit-transition-duration: 800ms;
+    transition-duration: 800ms;
+    opacity: 0;
+    bottom: -30px;
+    cursor: pointer;
+    z-index: 1 !important;
+    background-image: var(--sticky-note);
+    
+  }
+
+    .hero-slides .single-hero-slide:hover .hero-slide-sticky-note {
+      position: relative;
+      bottom: 0;
+      opacity: 1;
+      z-index: 99 !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+      
+    }
+
+    .hero-slides .single-hero-slide-right .hero-slide-sticky-note-right {
+      height: 800px;
+      min-width: auto;
+      position: fixed;
+      margin-right: -50px;
+      margin-left: -50px;
+      
+      -webkit-transition-duration: 800ms;
+      transition-duration: 800ms;
+      opacity: 0;
+      bottom: -30px;
+      cursor: pointer;
+      z-index: 20 !important;
+      background-image: var(--sticky-note);
+    }
+  
+      .hero-slides .single-hero-slide-right:hover .hero-slide-sticky-note-right {
+        position: fixed;
+        bottom: 0;
+        opacity: 1;
+        z-index: 9999 !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        
+      }
+  .hero-slides .single-hero-slide .hero-slides-content {
+    position: relative;
+    z-index: 101;
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
+    -webkit-transition-duration: 800ms;
+    transition-duration: 800ms;
+    bottom: 0; 
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+    /* .hero-slides .single-hero-slide .hero-slides-content .line {
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%, 0%);
       width: 100px;
-      height: 1px;
+      height: 2px;
       background-color: #ffffff;
+      margin-top: 30px;
       margin-bottom: 30px;
-      display: block; }
+      display: block; } */
     .hero-slides .single-hero-slide .hero-slides-content h2 {
       color: #ffffff;
       font-weight: 100; }
@@ -625,10 +723,10 @@ img {
       margin-bottom: 0;
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms;
-      margin-top: 140px; }
+      margin-top: 0px; }
   .hero-slides .single-hero-slide:hover .hero-slides-content {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%); }
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
   .hero-slides .single-hero-slide:hover p {
     margin-top: 40px; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -640,11 +738,12 @@ img {
   @media only screen and (max-width: 767px) {
     .hero-slides .single-hero-slide {
       height: 550px; } }
+
 .hero-slides .owl-dots {
   position: absolute;
   left: 50px;
   bottom: 50px; }
-  .hero-slides .owl-dots .owl-dot {
+  /* .hero-slides .owl-dots .owl-dot {
     width: 8px;
     height: 8px;
     border: 1px solid #6a6a67;
@@ -653,23 +752,50 @@ img {
     display: inline-block; }
     .hero-slides .owl-dots .owl-dot.active {
       border: 1px solid #ffffff;
-      background-color: #ffffff; }
+      background-color: #ffffff; } */
 
 /* :: Portfolio Area CSS */
 .portfolio-area {
   overflow-x: hidden; }
-  .portfolio-area .portfolio-title h2 {
+
+  .portfolio-area .main-header-image {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0% , rgba(153, 134, 39, 0.05) 75%, rgba(255, 248, 211, 1) 100%),
+    url('assets/img/banner-img/banner-img.jpg');
+    margin-top: -10%;
+    bottom: 0;
+    margin-bottom: 2%;
+    
+    left: 0;
+    right: 0;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+    }
+
+  .portfolio-area  .portfolio-title h2 {
+    transform: scale(1);
     font-size: 56px;
     text-align: center;
-    font-weight: 100; }
-    .portfolio-area .portfolio-title h2 span {
+    font-weight: 100; 
+    transition: 0.5s ease-in-out;
+  }
+    .portfolio-area  .portfolio-title h2 span {
       font-weight: 400; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .portfolio-area .portfolio-title h2 {
+      .portfolio-area  .portfolio-title h2 {
         font-size: 36px; } }
     @media only screen and (max-width: 767px) {
-      .portfolio-area .portfolio-title h2 {
+      .portfolio-area  .portfolio-title h2 {
         font-size: 30px; } }
+    .portfolio-area .main-header-wrapper:hover .main-header-image{
+      transform: scale(1.2);
+    }
+    .portfolio-area .main-header-wrapper:hover .portfolio-title h2{
+      transform: scale(1.2);
+    }
 
 .single-portfolio-item {
   position: relative;
@@ -885,7 +1011,7 @@ img {
   background-color: #232323;
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .hero-area .backEnd-content .dots {
@@ -1473,3 +1599,20 @@ img {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Random things I also added */
+.fa-apple-music .fa-music:before {
+  content: '\266B';
+}
+.fa-apple-music .fa-music {
+  color: #FFFFFF;
+}
+.fa-apple-music-o .fa-music {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+.fa-square-o {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}

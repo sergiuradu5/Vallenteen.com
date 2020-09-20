@@ -3,14 +3,26 @@ import { Injectable } from "@angular/core";
 import { Observable, BehaviorSubject, Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import * as moment from "moment";
-import {StreamState} from '../_interfaces/stream-state'
-
+import {StreamState} from '../_interfaces/stream-state';
+import { CloudService } from './cloud.service';
 @Injectable({
   providedIn: "root"
 })
 export class AudioService {
   private stop$ = new Subject();
   private audioObj = new Audio();
+  constructor(
+    private cloudService: CloudService
+  ) {}
+  /*By default the current file should be the first audio on the list */
+  file = new BehaviorSubject<any>({
+    file: this.cloudService.files[0],
+    index: 0
+  });
+  /* This is the current playing file, using it to play from different components*/
+  currentFile= this.file.asObservable();
+  isPlaying = new BehaviorSubject<boolean>(false);
+  isPlayingObservable = this.isPlaying.asObservable();
   audioEvents = [
     "ended",
     "error",
@@ -23,6 +35,7 @@ export class AudioService {
     "loadstart",
     "ended"
   ];
+
 
   private state: StreamState = {
     playing: false,
@@ -38,6 +51,23 @@ export class AudioService {
   private stateChange: BehaviorSubject<StreamState> = new BehaviorSubject(
     this.state
   );
+  changeIsPlaying(value: boolean)
+  {
+    this.isPlaying.next(value);
+  }
+
+  /*Changing the current playing file (method used in other components than nav-player) */
+  changeCurrentFile(file: any)
+  {
+    this.file.next(file);
+  }
+  constructCurrrentFile(index : number)
+  {
+    var currentFileFromCloud;
+    currentFileFromCloud=this.cloudService.getFile(index);
+    this.changeCurrentFile(currentFileFromCloud);
+  }
+
 
   private updateStateEvents(event: Event): void {
     switch (event.type) {

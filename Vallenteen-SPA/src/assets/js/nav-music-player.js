@@ -10,15 +10,15 @@ class musicPlayer {
 	}
 
 	play() {
-		let controlPanelObj = this.controlPanel,
-		infoBarObj = this.infoBar
-		Array.from(controlPanelObj.classList).find(function(element){
-					return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
-			});
+		// let controlPanelObj = this.controlPanel,
+		// infoBarObj = this.infoBar
+		// Array.from(controlPanelObj.classList).find(function(element){
+		// 			return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
+		// 	});
 		
-		Array.from(infoBarObj.classList).find(function(element){
-					return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
-			});
+		// Array.from(infoBarObj.classList).find(function(element){
+		// 			return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
+		// 	});
 	}
 }
 

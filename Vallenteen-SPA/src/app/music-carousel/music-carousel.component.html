@@ -1,0 +1,25 @@
+
+ <!-- ***** Hero Area Start ***** -->
+ <section class="hero-area">
+    <ul class="hero-slides owl-carousel">
+        <!-- Single Hero Slide -->
+        <div *ngFor="let slide of this.coverArts; let i = index">
+            <li class="bg-img slide-background-overlay hero-cosmic-latte" style="background-image: url(assets/img/hero-slides/Blank\ Cosmic\ Late\ Hero\ Slide.jpg)">
+                <div class="single-hero-slide bg-img" [style.--cover-art]=" this.url1 + this.coverArts[i].url + this.url2 | safeStyle ">
+                    <div class="bg-img hero-slide-sticky-note" [style.--sticky-note]=" this.url1 + this.stickyNotes[i].url + this.url2 | safeStyle ">
+                        <div class="container h-100 justify-content-center">
+                            <div class="row h-100 align-items-end justify-content-center">
+                                <div class="col-12">
+                                    <div class="hero-slides-content text-center justify-content-center" >
+                                        <app-click-to-play [idx]="i" ></app-click-to-play>
+                                        
+                                        <p>{{this.slideTexts[i]}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </ul>

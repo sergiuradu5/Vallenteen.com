@@ -1,21 +1,24 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Inject, AfterViewInit } from '@angular/core';
 import { AudioService } from "../_services/audio.service";
 import { CloudService } from "../_services/cloud.service";
 import { StreamState } from "../_interfaces/stream-state";
 import { AudioFile } from "../_interfaces/audio-file";
-declare var musicPlayer: any;
-declare var GreenAudioPlayer: any;
+import { BehaviorSubject } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
+// declare var musicPlayer: any;
 
 @Component({
   selector: 'app-nav-music-player',
   templateUrl: './nav-music-player.component.html',
   styleUrls: ['./nav-music-player.component.scss']
 })
-export class NavMusicPlayerComponent implements OnInit {
+export class NavMusicPlayerComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollingText') scrollingText : ElementRef;
+  
   files: Array<AudioFile> = [];
   state: StreamState;
-  isPlaying = false;
+
+  isPlaying: boolean;
   isSongLoaded = false;
   url1 = 'url("';
   url2 = '")';
@@ -23,45 +26,43 @@ export class NavMusicPlayerComponent implements OnInit {
    };
 
   constructor(
-    public audioService: AudioService,
-    public cloudService: CloudService,
-    private elRef: ElementRef
+    @Inject(DOCUMENT) private document: Document, 
+            private elementRef:ElementRef,
+            public audioService: AudioService,
+            public cloudService: CloudService,
   ) {
     
   }
 
   ngOnInit() {
     // get media files
-    musicPlayer = new musicPlayer();
     this.cloudService.getFiles().subscribe(files => {
       this.files = files;
-      console.log(this.files);
+  
     });
-    this.currentFile.file = this.files[0];
-    this.currentFile.index = 0;
+    this.audioService.isPlayingObservable.subscribe(value => {
+      this.isPlaying = value;
+    });
+    this.audioService.currentFile.subscribe(file => {
+      this.currentFile = file;
+    });
     this.openFile(this.currentFile.file, this.currentFile.index);
-    // var url = 'url("' + this.currentFile.file.coverArt.url +'")';
-    // console.log(url);
-    // document.getElementById('album-art').style.backgroundImage = url;
-
      // listen to stream state
      this.audioService.getState().subscribe(state => {
       this.state = state;
       if(this.state.ended)
       {
         if(!this.isLastPlaying())
-          this.next();
+       {   this.next();}
         else {
-          this.currentFile.file = this.files[0];
-          this.currentFile.index = 0;
-          this.openFile(this.currentFile.file, this.currentFile.index);
+         this.fromBeginning();
         }
       }
     });
     
   }
+
   ngAfterViewInit() {
-    console.log(this.scrollingText.nativeElement);
   }
 
   playStream(url) {
@@ -75,8 +76,10 @@ export class NavMusicPlayerComponent implements OnInit {
   }
 
   openFile(file : AudioFile, index: number) {
+    
     this.currentFile.index = index;
     this.currentFile.file = file;
+    this.audioService.changeCurrentFile(this.currentFile);
     this.audioService.stop();
     // var url = 'url("' + this.currentFile.file.coverArt.url +'")';
     // document.documentElement.style.setProperty('--album-art', url);
@@ -99,23 +102,29 @@ export class NavMusicPlayerComponent implements OnInit {
   }
 
   pause() {
-    this.isPlaying = !this.isPlaying;
     this.audioService.pause();
+    this.audioService.changeIsPlaying(!this.isPlaying);
   }
 
   play() {
-    this.isPlaying = !this.isPlaying;
     if(this.state.ended)
     {
-      this.audioService.playStream(this.currentFile.file.url);
+      // this.audioService.playStream(this.currentFile.file.url);
     }
     else{
     this.audioService.play();
     }
+    this.audioService.changeIsPlaying(!this.isPlaying);
   }
   stop() {
-    this.isPlaying = !this.isPlaying;
     this.audioService.stop();
+    this.audioService.changeIsPlaying(!this.isPlaying);
+  }
+  fromBeginning()
+  {
+    const index = 0;
+    const file = this.files[index];
+    this.openFile(file, index);
   }
   next() {
     const index = this.currentFile.index + 1;
@@ -143,7 +152,7 @@ export class NavMusicPlayerComponent implements OnInit {
   }
 
   onSliderChangeEnd(change) {
-    console.log(change.value);
+  
     this.audioService.seekTo(change.value);
   }
 

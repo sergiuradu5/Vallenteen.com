@@ -1,23 +1,38 @@
 
+<app-main-menu></app-main-menu>
 
+<app-nav-bar></app-nav-bar>
+
+
+<!-- <div class="">
+    <app-alerts style="position:fixed; top:9%; left:auto; right: auto; z-index: 100; margin-left: 30%; margin-right:30%" class="alert" message="Hover over the cover arts, click on the play button, and enjoy the music!"></app-alerts>
+</div> -->
+
+<app-music-carousel></app-music-carousel>
+   
 
 <!-- ***** Portfolio Area Start ***** -->
 <div class="portfolio-area section-padding-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="portfolio-title">
-                    <h2>“In photography there is a reality so subtle that it becomes more <span>real</span> than reality.”</h2>
+    <!-- Main Header Image -->
+    <div class="main-header-wrapper">
+        <div class="main-header-image wow fadeIn"></div>     
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio-title wow fadeIn">
+                        <h2>“indie electronic music about the daily life”</h2>
+                    </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="container">
         <div class="row justify-content-between">
             <!-- Single Portfoio Area -->
             <div class="col-12 col-md-5">
                 <div class="single-portfolio-item mt-100 portfolio-item-1 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
+                        
                         <h2>Reality</h2>
                     </div>
                     <div class="portfolio-thumb">
@@ -33,7 +48,7 @@
             <div class="col-12 col-md-6">
                 <div class="single-portfolio-item mt-230 portfolio-item-2 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
+                       
                     </div>
                     <div class="portfolio-thumb">
                         <img src="assets/img/bg-img/p2.png" alt="">
@@ -51,7 +66,7 @@
             <div class="col-12 col-md-10">
                 <div class="single-portfolio-item mt-100 portfolio-item-3 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
+                       
                         <h2>Photography</h2>
                     </div>
                     <div class="portfolio-thumb">
@@ -70,7 +85,7 @@
             <div class="col-12 col-md-6">
                 <div class="single-portfolio-item portfolio-item-4 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
+                       
                     </div>
                     <div class="portfolio-thumb">
                         <img src="assets/img/bg-img/p2.png" alt="">
@@ -88,7 +103,7 @@
             <div class="col-12 col-md-5">
                 <div class="single-portfolio-item portfolio-item-5 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
+                       
                         <h2>Hope</h2>
                     </div>
                     <div class="portfolio-thumb">
@@ -122,7 +137,6 @@
             <div class="col-12 col-md-4">
                 <div class="single-portfolio-item portfolio-item-7 wow fadeIn">
                     <div class="backend-content">
-                        <img class="dots" src="assets/img/core-img/dots.png" alt="">
                         <h2>Future</h2>
                     </div>
                     <div class="portfolio-thumb">
@@ -158,21 +172,5 @@
 </div>
 <!-- ***** Call to Action Area End ***** -->
 
-<!-- ***** Footer Area Start ***** -->
-<footer class="footer-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- Copywrite Text -->
-                <div class="copywrite-text">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- ***** Footer Area End ***** -->
+<app-footer> </app-footer>
 
