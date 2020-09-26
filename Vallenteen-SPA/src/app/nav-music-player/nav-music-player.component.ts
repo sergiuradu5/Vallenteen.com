@@ -52,11 +52,18 @@ export class NavMusicPlayerComponent implements OnInit, AfterViewInit {
       this.state = state;
       if(this.state.ended)
       {
+        
         if(!this.isLastPlaying())
-       {   this.next();}
+       {
+        this.state.ended = false; 
+        this.next();
+        
+      }
         else {
+        this.state.ended = false;
          this.fromBeginning();
         }
+
       }
     });
     
@@ -107,13 +114,7 @@ export class NavMusicPlayerComponent implements OnInit, AfterViewInit {
   }
 
   play() {
-    if(this.state.ended)
-    {
-      // this.audioService.playStream(this.currentFile.file.url);
-    }
-    else{
     this.audioService.play();
-    }
     this.audioService.changeIsPlaying(!this.isPlaying);
   }
   stop() {

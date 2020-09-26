@@ -10,10 +10,9 @@
                         <div class="container h-100 justify-content-center">
                             <div class="row h-100 align-items-end justify-content-center">
                                 <div class="col-12">
+                                    <app-click-to-play class="hero-play-button" [idx]="i" ></app-click-to-play>
                                     <div class="hero-slides-content text-center justify-content-center" >
-                                        <app-click-to-play [idx]="i" ></app-click-to-play>
-                                        
-                                        <p>{{this.slideTexts[i]}}</p>
+                                    
                                     </div>
                                 </div>
                             </div>
