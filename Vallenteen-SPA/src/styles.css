@@ -870,7 +870,7 @@ img {
     .single-portfolio-item.portfolio-item-3 {
       margin-bottom: 100px; } }
   .single-portfolio-item.portfolio-item-4 {
-    top: -220px; }
+    top: -50px; }
     .single-portfolio-item.portfolio-item-4 .backend-content .dots {
       top: auto;
       bottom: -130px;
@@ -883,7 +883,7 @@ img {
         top: 0;
         margin-bottom: 100px; } }
   .single-portfolio-item.portfolio-item-5 {
-    top: -450px;
+    top: -850px;
     height: 0; }
     @media only screen and (max-width: 767px) {
       .single-portfolio-item.portfolio-item-5 {

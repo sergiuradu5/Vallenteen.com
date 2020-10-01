@@ -6,14 +6,14 @@ declare const $ : any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent  {
   constructor(@Inject(DOCUMENT) private document: Document, 
             private elementRef:ElementRef
   ){};
   
   ngOnInit():void {
   }
-  ngAfterViewInit() {
+   ngAfterViewInit() {
     var j = this.document.createElement("script");
     j.type = "text/javascript";
     j.src = "../assets/js/jquery/jquery-2.2.4.min.js";
@@ -39,6 +39,16 @@ export class AppComponent implements OnInit, AfterViewInit {
     s.src = "../assets/js/active.js";
     this.elementRef.nativeElement.appendChild(s);
 
+    var mp = this.document.createElement("script");
+    mp.type= "text/javascript";
+    mp.src = "../assets/js/nav-music-player.js";
+    this.elementRef.nativeElement.appendChild(mp);
+
+    var owl = this.document.createElement("script");
+    owl.type= "text/javascript";
+    owl.src = "../assets/js/owl.carousel.min.js";
+    this.elementRef.nativeElement.appendChild(owl);
+
     var d = this.document.createElement("script");
     d.type = "text/javascript";
     d.src = "../assets/js/map-active.js";
@@ -46,5 +56,4 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   }
 
-  title = 'Vallenteen-SPA';
 }

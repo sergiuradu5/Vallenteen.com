@@ -27,6 +27,7 @@
     "moment": "^2.27.0",
     "ngx-bootstrap": "^6.1.0",
     "ngx-owl-carousel": "^2.0.7",
+    "ngx-owl-carousel-o": "^4.0.0",
     "ngx-spinner": "^10.0.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",

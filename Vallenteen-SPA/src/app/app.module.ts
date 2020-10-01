@@ -1,23 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { OwlModule } from 'ngx-owl-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
-import { MusicCarouselComponent } from './music-carousel/music-carousel.component';
+import { MusicCarouselComponent } from './home/music-carousel/music-carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavMusicPlayerComponent } from './nav-music-player/nav-music-player.component';
 import { SafeStylePipe} from './_helpers/safe-style.pipe';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { ClickToPlayComponent } from './click-to-play/click-to-play.component';
-import { AlertsComponent } from './alerts/alerts.component';
+import { ClickToPlayComponent } from './home/click-to-play/click-to-play.component';
+import { AlertsComponent } from './_alerts/alerts.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { HomePhotosComponent } from './home/home-photos/home-photos.component';
+import { PreFooterComponent } from './home/pre-footer/pre-footer.component';
+import appRoutes from './routes';
+import { AboutComponent } from './about/about.component';
+import { DiscographyComponent } from './discography/discography.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [							
+  declarations: [													
     AppComponent,
     MusicCarouselComponent,
     NavBarComponent,
@@ -26,20 +35,27 @@ import { FooterComponent } from './footer/footer.component';
       ClickToPlayComponent,
       AlertsComponent,
       MainMenuComponent,
-      FooterComponent
+      FooterComponent,
+      HomeComponent,
+      HomePhotosComponent,
+      
+      PreFooterComponent,
+      AboutComponent,
+      DiscographyComponent,
+      GalleryComponent,
+      ContactComponent
    ],
   imports: [
     BrowserModule,
-    OwlModule,
+    CarouselModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
     
   ],
   providers: [],
-  bootstrap: [AppComponent,
-    NavMusicPlayerComponent
-
+  bootstrap: [AppComponent
   ]
 })
 export class AppModule { }

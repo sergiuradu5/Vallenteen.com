@@ -7,32 +7,26 @@
   </div>
   <!-- Logo Area -->
   <div class="logo-area">
-      <a >Welcome to my music website!</a>
+      <a >welcome to my website!</a>
   </div>
   <!-- Nav -->
   <div class="sonarNav wow fadeInUp" data-wow-delay="1s">
       <nav>
           <ul>
               <li class="nav-item active">
-                  <a class="nav-link" >Home</a>
+                  <a class="nav-link" [routerLink]="['/home']" >home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" >About Me</a>
+                  <a class="nav-link" [routerLink]="['/about']">about me</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" >Services</a>
+                  <a class="nav-link" [routerLink]="['/discography']">discography</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" >Portfolio</a>
+                  <a class="nav-link" [routerLink]="['/gallery']">gallery</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" >Blog</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" >Contact</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" >Elements</a>
+                  <a class="nav-link" [routerLink]="['/contact']">contact</a>
               </li>
           </ul>
       </nav>

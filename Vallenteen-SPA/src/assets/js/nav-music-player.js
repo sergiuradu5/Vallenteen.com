@@ -1,4 +1,3 @@
-console.clear();
 
 class musicPlayer {
 	constructor() {
@@ -22,4 +21,4 @@ class musicPlayer {
 	}
 }
 
-const newMusicplayer = new musicPlayer();
+// const newMusicplayer = new musicPlayer();
