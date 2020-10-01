@@ -23,23 +23,30 @@ export class MusicCarouselComponent implements OnInit  {
     touchDrag: true,
     pullDrag: false,
     dots: true,
-    navSpeed: 700,
+    navSpeed: 1500,
+    dotsSpeed: 1500,
+    dragEndSpeed: 1500,
+    smartSpeed: 1500,
     navText: ['', ''],
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    autoplaySpeed: 1500,
+    nav: false,
     responsive: {
       0: {
         items: 1
       },
-      400: {
+      580: {
         items: 2
       },
-      740: {
+      1280: {
         items: 3
       },
-      940: {
+      2500: {
         items: 4
       }
     },
-    nav: true
   }
 
   ngOnInit() {

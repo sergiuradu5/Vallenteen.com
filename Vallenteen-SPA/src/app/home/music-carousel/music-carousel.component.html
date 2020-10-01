@@ -1,24 +1,32 @@
 
  <!-- ***** Hero Area Start ***** -->
- <section class="hero-area">
-    <ul class="hero-slides">
-        <!-- Single Hero Slide -->
-        <div *ngFor="let slide of this.coverArts; let i = index">
-            <li class="bg-img slide-background-overlay hero-cosmic-latte" style="background-image: url(assets/img/hero-slides/Blank\ Cosmic\ Late\ Hero\ Slide.jpg)">
-                <div class="single-hero-slide bg-img  wow fadeIn" [style.--cover-art]=" this.url1 + this.coverArts[i].url + this.url2 | safeStyle ">
-                    <div class="bg-img hero-slide-sticky-note" [style.--sticky-note]=" this.url1 + this.stickyNotes[i].url + this.url2 | safeStyle ">
-                        <div class="container h-100 justify-content-center">
-                            <div class="row h-100 align-items-end justify-content-center">
-                                <div class="col-12">
-                                    <app-click-to-play class="hero-play-button" [idx]="i" ></app-click-to-play>
-                                    <div class="hero-slides-content text-center justify-content-center" >
-                                    
+
+<section class="hero-area"> 
+    <owl-carousel-o class="hero-slides" [options]="customOptions">
+
+        <ng-container *ngFor="let slide of this.coverArts; let i=index">
+          <ng-template carouselSlide [id]="i">
+                <div class="bg-img slide-background-overlay hero-cosmic-latte" style="background-image: url(assets/img/hero-slides/Blank\ Cosmic\ Late\ Hero\ Slide.jpg)">
+                    <div class="single-hero-slide bg-img  wow fadeIn" [style.--cover-art]=" this.url1 + this.coverArts[i].url + this.url2 | safeStyle ">
+                        <div class="bg-img hero-slide-sticky-note" [style.--sticky-note]=" this.url1 + this.stickyNotes[i].url + this.url2 | safeStyle ">
+
+                            <div class="container h-100 justify-content-center">
+                                <div class="row h-100 align-items-end justify-content-center">
+                                    <div class="col-12">
+                                        
+                                        <app-click-to-play class="hero-play-button" [idx]="i" ></app-click-to-play>
+                                        <div class="hero-slides-content text-center justify-content-center" >
+                                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-                    </div>
+                    </div> 
                 </div>
-            </li>
-        </div>
-    </ul>
+          </ng-template>
+        </ng-container>
+     
+      </owl-carousel-o>
+</section>

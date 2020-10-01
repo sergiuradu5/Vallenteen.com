@@ -734,7 +734,7 @@ img {
     transform: translateY(-100%);*/ } 
   .hero-slides .single-hero-slide:hover p {
     }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .hero-slides .single-hero-slide {
       height: 800px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -742,7 +742,7 @@ img {
       height: 700px; } }
   @media only screen and (max-width: 767px) {
     .hero-slides .single-hero-slide {
-      height: 550px; } }
+      height: 550px; } } */
 
 .hero-slides .owl-dots {
   position: absolute;
