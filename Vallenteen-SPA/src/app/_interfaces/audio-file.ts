@@ -6,4 +6,7 @@ export interface AudioFile {
     title: string;
     artist: string;
     coverArt?: CoverArt;
+    discographyArt? : CoverArt;
+    info?: string;
+    bandcampLink?: string;
 }

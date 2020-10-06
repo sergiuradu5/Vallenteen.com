@@ -1,0 +1,24 @@
+<div class="song-card card mb-4">
+  <div class="card-img-wrapper">
+    <img class="card-img-top" src="{{song.discographyArt.url}}">
+
+  </div>
+    <div class="card-body p-2">
+      <div class="card-buttons">
+          <app-click-to-play (mouseenter)="playButtonMouseEnter()" (mouseleave)="playButtonMouseLeave()" class="discography-play-button" [idx]="idx"></app-click-to-play>
+        
+          <a href="{{song.bandcampLink}}"  target="blank">
+            <div (mouseenter)="supportButtonMouseEnter()" (mouseleave)="supportButtonMouseLeave()" class="download-button"></div>
+          </a>
+
+          <p style="transition-duration: 500ms;" [style.visibility]="playTextVisible ? visible : hidden" [style.opacity]="playTextVisible ? 1 : 0"   class="play-text card-text text-muted text-center">play this song</p>
+          <p style="transition-duration: 500ms;" [style.visibility]="supportTextVisible ? visible : hidden" [style.opacity]="supportTextVisible ? 1 : 0" class="support-text card-text text-muted text-center">support me and download my music</p>
+        
+      </div>
+      <div class="card-info">
+        <h6 class="card-title text-center mb-1">{{song.title}}</h6>
+        <p class="card-text text-muted text-center">{{song.info}}</p>
+      </div>
+      
+  </div>
+</div>

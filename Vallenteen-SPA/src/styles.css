@@ -12,6 +12,7 @@
 /* :: Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 /* :: Import All CSS */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import url(assets/css/bootstrap.min.css);
 /* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
 @import url(assets/css/animate.css);
@@ -725,6 +726,38 @@ img {
       transform: translate(-50%, -50%) translateY(-30px);
     }
 
+    .hero-play-button .play-button {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      left: 50%;
+      border-radius: 10px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+      box-shadow: 0px 10px 20px 5px rgba(132, 132, 132, 0.3);
+      transform: translate(-50%, 0%) scale(1);
+      transition: all 0.5s ease;
+  }
+  
+  
+  .hero-play-button .play-button:hover{
+      background-color: #eee;
+      transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+      transform: translate(-50%, 0%) scale(1.2);
+      transition: all 0.5s ease;
+  }
+  
+  
+  .hero-play-button .play-button {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi4xNTMgMjMyLjE1MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjE1MyAyMzIuMTUzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBsYXkiPgoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTIwMy43OTEsOTkuNjI4TDQ5LjMwNywyLjI5NGMtNC41NjctMi43MTktMTAuMjM4LTIuMjY2LTE0LjUyMS0yLjI2NiAgIGMtMTcuMTMyLDAtMTcuMDU2LDEzLjIyNy0xNy4wNTYsMTYuNTc4djE5OC45NGMwLDIuODMzLTAuMDc1LDE2LjU3OSwxNy4wNTYsMTYuNTc5YzQuMjgzLDAsOS45NTUsMC40NTEsMTQuNTIxLTIuMjY3ICAgbDE1NC40ODMtOTcuMzMzYzEyLjY4LTcuNTQ1LDEwLjQ4OS0xNi40NDksMTAuNDg5LTE2LjQ0OVMyMTYuNDcxLDEwNy4xNzIsMjAzLjc5MSw5OS42Mjh6IiBmaWxsPSIjYzJjNmNmIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  }
+
     .hero-slides .single-hero-slide .hero-slides-content p {
       color: #ffffff;
       margin-bottom: 0;
@@ -868,7 +901,7 @@ img {
         top: -70px; } }
   @media only screen and (max-width: 767px) {
     .single-portfolio-item.portfolio-item-3 {
-      margin-bottom: 100px; } }
+      margin-bottom: 50px; } }
   .single-portfolio-item.portfolio-item-4 {
     top: -50px; }
     .single-portfolio-item.portfolio-item-4 .backend-content .dots {
@@ -883,7 +916,7 @@ img {
         top: 0;
         margin-bottom: 100px; } }
   .single-portfolio-item.portfolio-item-5 {
-    top: -850px;
+    top: -800px;
     height: 0; }
     @media only screen and (max-width: 767px) {
       .single-portfolio-item.portfolio-item-5 {
@@ -1621,3 +1654,180 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
+
+/* Discography area */
+.discography-headline {
+  position: relative;
+  padding-top: 50px;
+  text-align: center; }
+  .discography-headline h2 {
+    font-weight: 100;
+    font-size: 72px;
+    margin-bottom: 15px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .discography-headline h2 {
+        font-size: 55px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .discography-headline h2 {
+        font-size: 36px; } }
+    @media only screen and (max-width: 767px) {
+      .discography-headline h2 {
+        font-size: 30px; } }
+  .discography-headline h5 {
+    font-size: 48px;
+    margin-bottom: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .discography-headline h5 {
+        font-size: 30px; } }
+    @media only screen and (max-width: 767px) {
+      .discography-headline h5 {
+        font-size: 24px; } }
+
+/* Song-Card */
+.song-card {
+  position: relative;
+  box-shadow: 3px 2px 6px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  top:0px;
+}
+.song-card:hover {
+  box-shadow: 6px 16px 6px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  top: -18px;
+}
+
+.song-card .card-info {
+  opacity: 1;
+  visibility: inherit;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+
+.song-card:hover .card-info {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+
+.song-card .card-buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+.song-card:hover .card-buttons {
+  opacity: 1;
+  visibility: inherit;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+
+
+
+.song-card .play-button-with-text {
+  position: relative;
+  transform: translate(-50%, 0%);
+  display: block;
+}
+
+.button-text {
+  position: relative;
+}
+
+.discography-play-button .play-button {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  box-shadow: 0px 10px 20px 5px rgba(132, 132, 132, 0.3);
+  transform: translate(-50%, 0%) scale(1);
+  transition: all 0.5s ease;
+}
+
+
+.discography-play-button .play-button:hover{
+  background-color: #eee;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transform: translate(-50%, 0%) scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.song-card .card-buttons {
+  display: inline;
+}
+.discography-play-button .play-button {
+  float: left;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi4xNTMgMjMyLjE1MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjE1MyAyMzIuMTUzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBsYXkiPgoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTIwMy43OTEsOTkuNjI4TDQ5LjMwNywyLjI5NGMtNC41NjctMi43MTktMTAuMjM4LTIuMjY2LTE0LjUyMS0yLjI2NiAgIGMtMTcuMTMyLDAtMTcuMDU2LDEzLjIyNy0xNy4wNTYsMTYuNTc4djE5OC45NGMwLDIuODMzLTAuMDc1LDE2LjU3OSwxNy4wNTYsMTYuNTc5YzQuMjgzLDAsOS45NTUsMC40NTEsMTQuNTIxLTIuMjY3ICAgbDE1NC40ODMtOTcuMzMzYzEyLjY4LTcuNTQ1LDEwLjQ4OS0xNi40NDksMTAuNDg5LTE2LjQ0OVMyMTYuNDcxLDEwNy4xNzIsMjAzLjc5MSw5OS42Mjh6IiBmaWxsPSIjYzJjNmNmIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+.song-card .card-body {
+  height: 85px !important;
+}
+.song-card .download-button {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-color: #faee80;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  box-shadow: 0px 10px 20px 5px rgba(132, 132, 132, 0.3);
+  transform: translate(50%, 0%) scale(1);
+  transition: all 0.5s ease;
+}
+
+
+.song-card .download-button:hover{
+  background-color: #f0db80;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transform: translate(50%, 0%) scale(1.2);
+  transition: all 0.5s ease;
+}
+.song-card .download-button {
+  float: right;
+  background-image: url('assets/img/tools/Download Button.png');
+}
+
+.song-card .card-body .card-buttons .card-text {
+  position: absolute;
+  width: 300%;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 95%);
+}
+
+.song-card .card-body .card-buttons .play-text {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 150%);
+}
+
+.song-card .card-body .card-info .card-text {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -5%);
+}
+
+

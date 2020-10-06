@@ -22,6 +22,7 @@ import { PreFooterComponent } from './home/pre-footer/pre-footer.component';
 import appRoutes from './routes';
 import { AboutComponent } from './about/about.component';
 import { DiscographyComponent } from './discography/discography.component';
+import { SongCardComponent} from './discography/song-card/song-card.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -43,7 +44,8 @@ import { ContactComponent } from './contact/contact.component';
       AboutComponent,
       DiscographyComponent,
       GalleryComponent,
-      ContactComponent
+      ContactComponent,
+      SongCardComponent
    ],
   imports: [
     BrowserModule,
@@ -51,8 +53,9 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     MaterialModule,
     AlertModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
-    
+    RouterModule.forRoot(appRoutes,{
+        scrollPositionRestoration: 'enabled' // Add options right here
+      })
   ],
   providers: [],
   bootstrap: [AppComponent
