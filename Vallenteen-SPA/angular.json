@@ -40,7 +40,6 @@
               "./src/assets/js/active.js",
               "./src/assets/js/map-active.js",
               "./src/assets/js/nav-music-player.js"
-              
             ]
           },
           "configurations": {
@@ -131,6 +130,14 @@
             "production": {
               "devServerTarget": "Vallenteen-SPA:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/Vallenteen-SPA",
+            "netlifyToken": "dtkDBByxJ1I7rCRlG7ximrSN5O1cztpwx4EGZtRsYmQ",
+            "siteId": "3346d0d1-6904-4fe1-ae21-83ba2d50ea3f"
           }
         }
       }
