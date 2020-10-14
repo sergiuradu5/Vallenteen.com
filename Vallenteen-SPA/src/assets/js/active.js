@@ -39,6 +39,19 @@
         $('body').removeClass('menu-open');
     });
 
+    // :: Menu Exiting With Mouse Deactivate
+    var isOnScrollUp = false;
+    $('#scrollUp').mouseenter(function(){isOnScrollUp=true;});
+    $('#scrollUp').mouseleave(function(){isOnScrollUp=false;});
+
+    $('.mainMenu').mouseleave(function() {
+        if(isOnScrollUp===false)
+        {
+        $('body').removeClass('menu-open');  
+        }
+        
+      });
+
     // :: Tooltip Active Code
     $('[data-toggle="tooltip"]').tooltip()
 

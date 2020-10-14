@@ -48,7 +48,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[0],
           discographyArt: this.discographyArts[0],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[0]
         },
         {
@@ -58,7 +58,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[1],
           discographyArt: this.discographyArts[1],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[1]
         },
         {
@@ -68,7 +68,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[2],
           discographyArt: this.discographyArts[2],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[2]
         },
         {
@@ -78,7 +78,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[3],
           discographyArt: this.discographyArts[3],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[3]
         },
         {
@@ -88,7 +88,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[4],
           discographyArt: this.discographyArts[4],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[4]
         },
         {
@@ -98,7 +98,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[5],
           discographyArt: this.discographyArts[5],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[5]
         },
         {
@@ -108,7 +108,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[6],
           discographyArt: this.discographyArts[6],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[6]
         },
         {
@@ -118,7 +118,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[7],
           discographyArt: this.discographyArts[7],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[7]
         },
         {
@@ -128,7 +128,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[8],
           discographyArt: this.discographyArts[8],
-          info: "the “crushes” album",
+          info: "The “crushes” album",
           bandcampLink: this.bandcampLinks[8]
         },
         // The songs outside the "crushes" album
@@ -139,7 +139,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[9],
           discographyArt: this.discographyArts[9],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[9]
         },
         {
@@ -149,7 +149,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[10],
           discographyArt: this.discographyArts[10],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[10]
         },
         {
@@ -159,7 +159,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[11],
           discographyArt: this.discographyArts[11],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[11]
         },
         {
@@ -169,7 +169,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[12],
           discographyArt: this.discographyArts[12],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[12]
         },
         {
@@ -179,7 +179,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[13],
           discographyArt: this.discographyArts[13],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[13]
         },
         {
@@ -189,7 +189,7 @@ export class CloudService {
           artist: "vallenteen",
           coverArt: this.coverArts[14],
           discographyArt: this.discographyArts[14],
-          info: "single",
+          info: "Single",
           bandcampLink: this.bandcampLinks[14]
         }
       ];

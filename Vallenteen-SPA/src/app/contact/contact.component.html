@@ -1,3 +1,118 @@
-<p>
-  contact works!
-</p>
+ <!-- ***** Hero Area Start ***** -->
+ <div class="hero-area d-flex align-items-center">
+       
+<!-- Hero Thumbnail -->
+<img class="hero-thumbnail contact-thumbnail wow fadeInUp" src='../../assets/img/cover-arts/[Cover Art] How to talk to your crush tutorial [S].png'> 
+  
+  <!-- Hero Content -->
+  <div class="hero-content equalize wow fadeInUp">
+      <div class="container-fluid h-100">
+          <div class="row h-100 align-items-center justify-content-center">
+              <div class="col-12 col-md-8">
+                  <div class="line"></div>
+                  <h2>Contact me</h2>
+                  <h4>sergiuradu5@gmail.com</h4>
+                  <a href="mailto:sergiuradu5@gmail.com" target="_blank" class="btn sonar-btn ">contact me</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- ***** Hero Area End ***** -->
+
+ 
+
+<section class="sonar-contact-area section-padding-100">
+  <!-- back end content -->
+  <div class="backEnd-content">
+      <img class="dots" src="img/core-img/dots.png" alt="">
+  </div>
+  
+  <div class="container">
+      <div class="row">
+          <!-- Contact Form Area -->
+          <div class="col-12 wow fadeInUp">
+              <div class="contact-form text-center">
+
+                  <h2>Leave your message for me</h2>
+                  <h4>Let’s talk</h4>
+
+                  <form  [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+                      <div class="row">
+                          <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                  <input type="text"
+                                  [ngClass]="{'is-invalid': contactForm.get('name').errors && contactForm.get('name').touched }"
+                                  formControlName="name" 
+                                  class="form-control"  id="contact-name" placeholder="Your Name">
+                                  <div class="invalid-feedback"><i>Please insert your name</i></div>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                  <input type="email" 
+                                  [ngClass]="{'is-invalid': contactForm.get('emailAddress').errors && contactForm.get('emailAddress').touched }"
+                                  formControlName="emailAddress"  class="form-control" id="contact-email" placeholder="Your Email">
+                                  <div
+                                    *ngIf="contactForm.get('emailAddress').hasError('required') && contactForm.get('emailAddress').touched " 
+                                    class="invalid-feedback"><i>Email is required</i>
+                                </div>
+                                <div
+                                *ngIf="contactForm.get('emailAddress').hasError('email') && contactForm.get('emailAddress').touched " 
+                                class="invalid-feedback"><i>Please insert a valid Email format</i>
+                                </div>
+                          </div>
+                              </div>
+                              
+                          <div class="col-12">
+                              <div class="form-group">
+                                  <textarea class="form-control"
+                                  [ngClass]="{'is-invalid': contactForm.get('message').errors && contactForm.get('message').touched }" 
+                                  formControlName="message"  id="message" cols="30" rows="10" placeholder="Message">
+                                </textarea>
+                                <small *ngIf="contactForm.get('message').value.length"> <i>{{contactForm.get('message').value.length}} out of {{charactersAllowed}} characters used</i></small>
+                                  <div
+                                    *ngIf="contactForm.get('message').hasError('maxlength') && contactForm.get('message').touched " 
+                                    class="invalid-feedback"><i>Maximum length is 1000 characters</i>
+                                  </div>
+                                  <div
+                                    *ngIf="contactForm.get('message').hasError('required') && contactForm.get('message').touched " 
+                                    class="invalid-feedback"><i>Your message is empty</i>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <button type="submit"  class="btn sonar-btn"> Send</button>
+                          </div>
+                      </div>
+                  </form>
+                 
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<ng-template #successTemplate>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Succes</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Your message has been sent successfully!
+    </div>
+  </ng-template>
+
+  <ng-template #errorTemplate>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Error</h4>
+      <button type="button btn-warning" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Your message failed to send.
+    </div>
+  </ng-template>

@@ -54,6 +54,11 @@ export class AppComponent  {
     d.src = "../assets/js/map-active.js";
     this.elementRef.nativeElement.appendChild(d);
 
+    var i = this.document.createElement("script");
+    i.type = "text/javascript";
+    i.src = "https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js";
+    this.elementRef.nativeElement.appendChild(i);
+
   }
 
 }

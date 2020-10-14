@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {ContactService} from '../_services/contact.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import {MessageSentModalComponent} from './message-sent-modal/message-sent-modal.component';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +10,52 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('successTemplate') successTemplate : ElementRef;
+  @ViewChild('errorTemplate') errorTemplate : ElementRef;
+  modalRef: BsModalRef;
+  
+  message: any = {};
+  charactersAllowed = 1000;
+  charactersUsed : number;
+  contactForm: FormGroup;
+  constructor(private contactService: ContactService,
+      private fb: FormBuilder,
+      private modalService: BsModalService
+    ) { }
 
-  constructor() { }
 
   ngOnInit() {
+    this.createContactForm();
+  }
+
+  createContactForm(){
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      emailAddress: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.maxLength(1000)]]
+    });
+  }
+
+  openSuccessModal() {
+    this.modalRef = this.modalService.show(this.successTemplate);
+  }
+  openErrorModal() {
+    this.modalRef = this.modalService.show(this.errorTemplate);
+  }
+  
+  sendMessage() {
+    if(this.contactForm.valid)
+    {
+      this.message = Object.assign( {}, this.contactForm.value);
+
+      this.contactService.sendMessage(this.message).subscribe(() => {
+        this.openSuccessModal();
+          
+      }, error => {
+        this.openErrorModal();
+        console.log(error);
+      });
+    }
   }
 
 }

@@ -4,6 +4,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { DiscographyComponent } from './discography/discography.component';
 import { SongCardComponent} from './discography/song-card/song-card.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [													
@@ -39,7 +42,7 @@ import { ContactComponent } from './contact/contact.component';
       FooterComponent,
       HomeComponent,
       HomePhotosComponent,
-      
+     
       PreFooterComponent,
       AboutComponent,
       DiscographyComponent,
@@ -52,12 +55,17 @@ import { ContactComponent } from './contact/contact.component';
     CarouselModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ModalModule.forRoot(),
     AlertModule.forRoot(),
     RouterModule.forRoot(appRoutes,{
         scrollPositionRestoration: 'enabled' // Add options right here
       })
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent
   ]
 })

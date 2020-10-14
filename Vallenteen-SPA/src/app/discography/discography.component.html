@@ -2,14 +2,14 @@
 <div class="container">
   <div class="row">
       <div class="col-12">
-          <div class="discography-headline wow fadeInDown mt-5" data-wow-delay="0.5s">
-              <h2>here's all of my music</h2>
-              <h5>feel free to listen, download, and enjoy!</h5>
+          <div class="discography-headline wow fadeInDown mt-5" data-wow-delay="0.2s">
+              <h2>Here's all of my music</h2>
+              <h5>Feel free to listen, download, and enjoy!</h5>
           </div>   
       </div>  
   </div>
 
-  <div class="row mt-5 wow fadeInUp" data-wow-delay="0.5s">
+  <div class="row mt-5 wow fadeInUp" data-wow-delay="0.2s">
     <div *ngFor="let song of songs; let i=index" class="col-lg-3 col-md-6 col-sm-12">
         <app-song-card [song]="song" [idx]="i"></app-song-card>
     </div>

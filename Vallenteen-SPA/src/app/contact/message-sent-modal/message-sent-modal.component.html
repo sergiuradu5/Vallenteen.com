@@ -1,0 +1,13 @@
+<button type="button" class="btn btn-primary" (click)="openModal()">Create template modal</button>
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Succes</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Your message has been sent successfully!
+  </div>
+</ng-template>
