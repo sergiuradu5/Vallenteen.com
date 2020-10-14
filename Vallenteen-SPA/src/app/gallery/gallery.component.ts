@@ -10,14 +10,14 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var userFeed = new Instafeed({
-      get: 'user',
-      target: "instafeed-container",
-        resolution: 'low_resolution',
-      userId: '30093904107',
-      accessToken: 'IGQVJWb2tzUnFaVkFfZAExxTkxtQTd0Q3lMSVRSMm9MR1NUQU1RNnlqMlVCek1kaGduWFhBc2xpOEp2empXc0QwSHZAsNDJnZA2ZAGV2Jad2lZAUUxiQnJJVGtYenpSSzJHYVNTTXkwWm9jZAWdNMUUzSWFnRgZDZD'
-    });
-    userFeed.run();
+    // var userFeed = new Instafeed({
+    //   get: 'user',
+    //   target: "instafeed-container",
+    //     resolution: 'high_resolution',
+    //   userId: '30093904107',
+    //   accessToken: 'IGQVJWb2tzUnFaVkFfZAExxTkxtQTd0Q3lMSVRSMm9MR1NUQU1RNnlqMlVCek1kaGduWFhBc2xpOEp2empXc0QwSHZAsNDJnZA2ZAGV2Jad2lZAUUxiQnJJVGtYenpSSzJHYVNTTXkwWm9jZAWdNMUUzSWFnRgZDZD'
+    // });
+    // userFeed.run();
   }
 
 }
