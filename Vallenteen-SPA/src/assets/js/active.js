@@ -99,33 +99,33 @@
         $(this).addClass('active');
     })
 
-    // :: Masonary Gallery Active Code
-    if ($.fn.imagesLoaded) {
-        $('.sonar-portfolio').imagesLoaded(function () {
-            // filter items on button click
-            $('.portfolio-menu').on('click', 'button', function () {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({
-                    filter: filterValue
-                });
-            });
-            // init Isotope
-            var $grid = $('.sonar-portfolio').isotope({
-                itemSelector: '.single_gallery_item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.single_gallery_item'
-                }
-            });
-        });
-    }
+    // // :: Masonary Gallery Active Code
+    // if ($.fn.imagesLoaded) {
+    //     $('.sonar-portfolio').imagesLoaded(function () {
+    //         // filter items on button click
+    //         $('.portfolio-menu').on('click', 'button', function () {
+    //             var filterValue = $(this).attr('data-filter');
+    //             $grid.isotope({
+    //                 filter: filterValue
+    //             });
+    //         });
+    //         // init Isotope
+    //         var $grid = $('.sonar-portfolio').isotope({
+    //             itemSelector: '.single_gallery_item',
+    //             percentPosition: true,
+    //             masonry: {
+    //                 columnWidth: '.single_gallery_item'
+    //             }
+    //         });
+    //     });
+    // }
 
-    // :: Magnific Popup Active Code
-    if ($.fn.magnificPopup) {
-        $('.gallery-img').magnificPopup({
-            type: 'image'
-        });
-    }
+    // // :: Magnific Popup Active Code
+    // if ($.fn.magnificPopup) {
+    //     $('.gallery-img').magnificPopup({
+    //         type: 'image'
+    //     });
+    // }
 
     // :: MatchHeight Active Code
     if ($.fn.matchHeight) {

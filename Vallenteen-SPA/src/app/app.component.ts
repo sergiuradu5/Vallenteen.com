@@ -56,8 +56,13 @@ export class AppComponent  {
 
     var i = this.document.createElement("script");
     i.type = "text/javascript";
-    i.src = "https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js";
+    i.src = "../assets/js/instafeed.min.js";
     this.elementRef.nativeElement.appendChild(i);
+
+    var ig_token = this.document.createElement("script");
+    ig_token.type = "text/javascript";
+    ig_token.src = "https://vallenteen-ig-token-agent.herokuapp.com/token.js";
+    this.elementRef.nativeElement.appendChild(ig_token);
 
   }
 

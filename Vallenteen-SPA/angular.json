@@ -105,7 +105,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/instafeed.min.js",
+              "https://vallenteen-ig-token-agent.herokuapp.com/token.js"
+            ]
           }
         },
         "lint": {
