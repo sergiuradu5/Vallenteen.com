@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'about', component: AboutComponent},
     { path: 'discography', component: DiscographyComponent},
-    { path: 'gallery', component: GalleryComponent},
+    { path: 'news', component: GalleryComponent},
     { path: 'contact', component: ContactComponent},
     { path: '**', redirectTo: 'home', pathMatch: 'full'},
   ];

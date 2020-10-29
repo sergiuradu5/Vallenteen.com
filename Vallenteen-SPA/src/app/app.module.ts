@@ -28,9 +28,13 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PreloaderComponent } from './preloader/preloader.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
-  declarations: [													
+  declarations: [														
     AppComponent,
     MusicCarouselComponent,
     NavBarComponent,
@@ -42,13 +46,13 @@ import { HttpClientModule } from '@angular/common/http';
       FooterComponent,
       HomeComponent,
       HomePhotosComponent,
-     
       PreFooterComponent,
       AboutComponent,
       DiscographyComponent,
       GalleryComponent,
       ContactComponent,
-      SongCardComponent
+      SongCardComponent,
+      PreloaderComponent
    ],
   imports: [
     BrowserModule,
@@ -58,15 +62,18 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
     ModalModule.forRoot(),
     AlertModule.forRoot(),
     RouterModule.forRoot(appRoutes,{
         scrollPositionRestoration: 'enabled' // Add options right here
-      })
+      }),
+    NgbModule
   ],
   providers: [
   ],
-  bootstrap: [AppComponent
+  bootstrap: [AppComponent,
+    
   ]
 })
 export class AppModule { }

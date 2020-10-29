@@ -96,8 +96,12 @@ body {
 			border-radius: 50%;
 			box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0);
 			transform: scale(1);
+			background-image: url("../../assets/img/cover-arts/[Cover\ Art]\ Loading.png");
+			transition: background-image 0.5s;
 			transition: all 0.5s ease;
-
+			
+			
+			
 			&::after {
 				content: "";
 				position: absolute;
@@ -125,7 +129,7 @@ body {
 				background-repeat: no-repeat;
 				background-size: 80px;
 				background-image: $album-art;
-				
+				transition: background-image 0.5s;
 			}
 		}
 
@@ -204,6 +208,33 @@ body {
 		}
 	}
 }
-
+@media only screen and (min-width: 1200px) {
+	.player {
+	  transform: scale(1.2);
+	top: 5%; } }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.player {
+	  transform: scale(1.2);
+	  top: 5%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.player {
+		transform: scale(1); } }
+  @media only screen and (max-width: 767px) {
+	.player {
+		transform: scale(0.9); } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+	}
+  @media only screen and (min-width: 359px) and (max-width: 767px) {
+	.player {
+		transform: translateX(-30%) scale(0.9); }
+	.player .info {
+		visibility: hidden;
+	} }
+	@media only screen and (max-width: 359px) {
+		.player {
+			transform: translateX(-40%) translateY(-10%) scale(0.7); }
+		.player .info {
+			visibility: hidden;
+		} }
 
 

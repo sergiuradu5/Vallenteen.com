@@ -23,7 +23,7 @@ export class GalleryComponent implements OnInit {
       template: `<div class="mb-4 col-12 col-sm-6 col-lg-3 wow fadeInUp " data-wow-delay="{{this.delay}}">
       <a class="" target="_blank" href="{{link}}">
       <div class="card instaphoto">
-        <div class="card-img-wrapper mt-1 text-center">
+        <div class="card-img-wrapper img-preloader mt-1 text-center" style="overflow: hidden;">
           <img class="img-brightness-change card-img-top img-cropped" src="{{image}}" alt="">
           <p class="p-2 d-flex align-self-center card-text card-movable-body text-white"><strong>{{caption}}</strong></p>
         </div>

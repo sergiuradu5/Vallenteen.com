@@ -37,7 +37,7 @@ export class MusicCarouselComponent implements OnInit  {
       0: {
         items: 1
       },
-      580: {
+      768: {
         items: 2
       },
       1280: {
