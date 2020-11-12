@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Vallenteen-SPA",
+            "outputPath": "../Vallenteen.API/wwwroot",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,7 +68,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
+                  "maximumWarning": "9.5kb",
                   "maximumError": "10kb"
                 }
               ]
@@ -140,7 +140,7 @@
         "deploy": {
           "builder": "@netlify-builder/deploy:deploy",
           "options": {
-            "outputPath": "dist/Vallenteen-SPA",
+            "outputPath": "../Vallenteen.API/wwwroot",
             "netlifyToken": "dtkDBByxJ1I7rCRlG7ximrSN5O1cztpwx4EGZtRsYmQ",
             "siteId": "3346d0d1-6904-4fe1-ae21-83ba2d50ea3f"
           }

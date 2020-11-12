@@ -60,18 +60,32 @@ namespace Vallenteen.API
             }
             else 
             {
-                
+                app.UseHsts();
             }
 
+            app.UseDeveloperExceptionPage();
+            app.UseHttpsRedirection();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
-            app.UseMvc();
+            
 
             app.UseHttpsRedirection();
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMvc(routes => 
+            {  
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new {controller = "Fallback",
+                    action = "Index"}
+                );
+            });
 
             
         }

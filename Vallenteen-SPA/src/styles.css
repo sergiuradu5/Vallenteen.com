@@ -88,8 +88,8 @@ a {
   border-style: solid;
   border-color: transparent;
   border-top-color: #000000;
-  -webkit-animation: sonar 2400ms linear infinite;
-  animation: sonar 2400ms linear infinite;
+  -webkit-animation: sonar 3000ms linear infinite;
+  animation: sonar 3000ms linear infinite;
   z-index: 999; }
   #sonar-load:before {
     content: "";
@@ -103,8 +103,8 @@ a {
     border-style: solid;
     border-color: transparent;
     border-top-color: #000000;
-    -webkit-animation: sonar 2700ms linear infinite;
-    animation: sonar 2700ms linear infinite; }
+    -webkit-animation: sonar 3400ms linear infinite;
+    animation: sonar 3400ms linear infinite; }
    #sonar-load:after {
     content: "";
     position: absolute;
@@ -117,8 +117,8 @@ a {
     border-style: solid;
     border-color: transparent;
     border-top-color: #000000;
-    -webkit-animation: sonar 1800ms linear infinite;
-    animation: sonar 1800ms linear infinite; }
+    -webkit-animation: sonar 2600ms linear infinite;
+    animation: sonar 2600ms linear infinite; }
 
 @-webkit-keyframes sonar {
   0% {
@@ -579,7 +579,7 @@ img {
         width: 200px;
       }
       .mainMenu .nav-link {
-        font-size: 14px;
+        font-size: 18px;
         padding: 10px; } }
     .mainMenu .nav-link::after {
       content: '';
@@ -1483,8 +1483,9 @@ img {
   position: relative;
   z-index: 1;
   padding: 120px 0;
+  background-size: auto 150%;
   overflow: hidden;
-  background-position: right top; }
+  background-position: right center; }
   
   .sonar-about-us-area::after {
     content: "";
@@ -2044,7 +2045,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border: 2px solid black;
   border-color: transparent black transparent black;
   border-radius: 50%;
-  animation: loader 1s linear infinite;
+  animation: loader 2s linear infinite;
 }
 .img-preloader:after {
   content: "";
@@ -2117,7 +2118,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-/* Screen Resize corrections */
+/* Screen Resize  Navbar corrections */
 @media only screen and (max-width: 1120px) {
 	.header-area .logo-area a {
 	  visibility: hidden;
@@ -2185,5 +2186,38 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     @media only screen and (max-width: 381px) {
       .hero-slides .hero-slide-sticky-note {
       transform: scale(0.85);}
+    }
+
+    /* Circle Picture in Home page */
+    #circle-picture {
+      background-image: url("assets/img/circle-pic/Circle Profile Pic (Before).png");
+    width: 480px;
+   height: 480px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -moz-border-radius: 240px;
+    -webkit-border-radius: 240px;
+    border-radius: 240px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    #circle-picture:hover {
+      background-image: url("assets/img/circle-pic/Circle Profile Pic (After).png");
+      -webkit-transition-duration: 500ms;
+      transition-duration: 500ms;
+      box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    @media only screen and (max-width: 500px) {
+      #circle-picture {
+       width: 340px;
+       height: 340px;
+       -moz-border-radius: 170px;
+       -webkit-border-radius: 170px;
+       border-radius: 170px;
+       margin-bottom: 20px;
+      }
     }
   
