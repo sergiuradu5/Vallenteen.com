@@ -51,7 +51,8 @@ export class ContactComponent implements OnInit {
       this.message._subject = subject;
 
       this.contactService.sendMessage(this.message).subscribe((response) => {
-        window.open("https://mailthis.to/confirm", "_blank");
+        window.open(
+          "https://mailthis.to/confirm", "_blank");
         this.openSuccessModal();
         this.contactForm.reset();
           
