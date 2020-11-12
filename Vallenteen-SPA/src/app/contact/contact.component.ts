@@ -52,9 +52,7 @@ export class ContactComponent implements OnInit {
       console.log(this.message);
 
       this.contactService.sendMessage(this.message).subscribe((response) => {
-        window.open( 
-          'https://mailthis.to/confirm', "_blank");
-
+        window.open("https://mailthis.to/confirm", "_blank");
         this.openSuccessModal();
           
       }, error => {
