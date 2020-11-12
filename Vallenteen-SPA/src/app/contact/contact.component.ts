@@ -46,9 +46,15 @@ export class ContactComponent implements OnInit {
   sendMessage() {
     if(this.contactForm.valid)
     {
+      let subject = `[vallenteen.com] New Message from ${this.contactForm.get('name').value}`;
       this.message = Object.assign( {}, this.contactForm.value);
+      this.message._subject = subject;
+      console.log(this.message);
 
-      this.contactService.sendMessage(this.message).subscribe(() => {
+      this.contactService.sendMessage(this.message).subscribe((response) => {
+        window.open( 
+          'https://mailthis.to/confirm', "_blank");
+
         this.openSuccessModal();
           
       }, error => {

@@ -82,7 +82,7 @@
                               </div>
                           </div>
                           <div class="col-12">
-                              <button type="submit"  class="btn sonar-btn"> Send</button>
+                              <button [disabled]="!contactForm.valid" type="submit"  class="btn sonar-btn"> Send</button>
                           </div>
                       </div>
                   </form>
