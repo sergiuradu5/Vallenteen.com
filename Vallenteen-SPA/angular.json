@@ -138,7 +138,7 @@
         "deploy": {
           "builder": "@netlify-builder/deploy:deploy",
           "options": {
-            "outputPath": "../Vallenteen.API/wwwroot",
+            "outputPath": "dist/Vallenteen-SPA",
             "netlifyToken": "dtkDBByxJ1I7rCRlG7ximrSN5O1cztpwx4EGZtRsYmQ",
             "siteId": "3346d0d1-6904-4fe1-ae21-83ba2d50ea3f"
           }
