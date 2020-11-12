@@ -49,11 +49,6 @@ export class AppComponent  {
     owl.src = "../assets/js/owl.carousel.min.js";
     this.elementRef.nativeElement.appendChild(owl);
 
-    var d = this.document.createElement("script");
-    d.type = "text/javascript";
-    d.src = "../assets/js/map-active.js";
-    this.elementRef.nativeElement.appendChild(d);
-
     var i = this.document.createElement("script");
     i.type = "text/javascript";
     i.src = "../assets/js/instafeed.min.js";

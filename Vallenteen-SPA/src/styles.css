@@ -1464,19 +1464,6 @@ img {
     height: 220px;
     padding: 15px; }
 
-.map-area {
-  position: relative;
-  z-index: 1;
-  margin: 0 50px; }
-  .map-area #googleMap {
-    width: 100%;
-    height: 540px; }
-    @media only screen and (max-width: 767px) {
-      .map-area #googleMap {
-        height: 400px; } }
-  @media only screen and (max-width: 767px) {
-    .map-area {
-      margin: 0 20px; } }
 
 /* :: About Area CSS */
 .sonar-about-us-area {

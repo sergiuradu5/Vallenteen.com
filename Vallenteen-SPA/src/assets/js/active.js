@@ -163,13 +163,3 @@
     }
 
 })(jQuery);
-
-// :: OKShadow Active Code
-$('#circle-picture').okshadow({
-    color: '#555',
-    xMax: 5,
-    yMax: 0,
-    yOffset: 3,
-    fuzzMin: 1,
-    fuzzMax: 3,
-  });

@@ -43,7 +43,7 @@ export class CloudService {
         // Songs inside the "crushes" album
         {
           url:
-            "../assets/music/1. that new girl is kinda cute.mp3",
+            "https://docs.google.com/uc?export=open&id=1IlhyROi7Guzfr4hWCgrocOJ6zcEjgbPE",
           title: "“that new girl is kinᵭa cute”",
           artist: "vallenteen",
           coverArt: this.coverArts[0],
@@ -53,7 +53,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/2. when you start to like someone.mp3",
+          "https://docs.google.com/uc?export=open&id=1F1023OZzZtwnFNUGbturTdA3GvZ08GbL",
           title: "“when you starƭ to like someone”",
           artist: "vallenteen",
           coverArt: this.coverArts[1],
@@ -63,7 +63,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/3. when you_re thinking about your crush in class.mp3",
+          "https://docs.google.com/uc?export=open&id=1qFcHT8FgYo378rOGKshKQ3WF8C7XWejM",
           title: "“when you're thinƙing about your crush in class”",
           artist: "vallenteen",
           coverArt: this.coverArts[2],
@@ -73,7 +73,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/4. when you can't sleep and she's on your mind.mp3",
+          "https://docs.google.com/uc?export=open&id=1Mu3kPveisiGwByWhK-T8adniyGIKE2Cy",
           title: "“when you can't sleeҏ and she's on your mind”",
           artist: "vallenteen",
           coverArt: this.coverArts[3],
@@ -83,7 +83,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/5. staring at your crush's instagram photos.mp3",
+          "https://docs.google.com/uc?export=open&id=1mD0PoUdu-f1b2bxKOFjICEd6N1AeZYvJ",
           title: "“staring at your crush's instagram photos”",
           artist: "vallenteen",
           coverArt: this.coverArts[4],
@@ -93,7 +93,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/6. how to talk to your crush tutorial.mp3",
+          "https://docs.google.com/uc?export=open&id=1AI3j5sc4K8F50iGVbNyiSLcYKPHgf690",
           title: "“how to talk to your cruȿh tutorial”",
           artist: "vallenteen",
           coverArt: this.coverArts[5],
@@ -103,7 +103,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/7. why are you so perfect all the time.mp3",
+          "https://docs.google.com/uc?export=open&id=1Qb9qutqVtU4ZXQUTLBZFEVuMAfi2eQrm",
           title: "“why are you so perʃect all the time”",
           artist: "vallenteen",
           coverArt: this.coverArts[6],
@@ -113,7 +113,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/8. butterflies and ƅlooming flowers from within.mp3",
+          "https://docs.google.com/uc?export=open&id=1j-GX7MRM9eeLKacIbQEUDnO_l5eHYOx3",
           title: "“butterflies and ƅlooming flowers from within”",
           artist: "vallenteen",
           coverArt: this.coverArts[7],
@@ -123,7 +123,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/9. when you fịnally ask your crush out.mp3",
+          "https://docs.google.com/uc?export=open&id=1Ne9EPpKgwoaCxnWI99lcwlmme8FdsjPm",
           title: "“when you fịnally ask your crush out”",
           artist: "vallenteen",
           coverArt: this.coverArts[8],
@@ -134,7 +134,7 @@ export class CloudService {
         // The songs outside the "crushes" album
         {
           url:
-          "../assets/music/10. don_t even bⱺther to understand.mp3",
+          "https://docs.google.com/uc?export=open&id=1ywRks1n0dMoEs2poVF5uVUlwQr8x9TiO",
           title: "“don't even bⱺther to understand”",
           artist: "vallenteen",
           coverArt: this.coverArts[9],
@@ -144,7 +144,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/11. coming home from school, it_s friday, sun is shining.mp3",
+          "https://docs.google.com/uc?export=open&id=1oVvHBKmCRVSTeBBTLUoEenEQkfzN7qMa",
           title: "“coming home from school, it's fridᴀy, sun is shining”",
           artist: "vallenteen",
           coverArt: this.coverArts[10],
@@ -154,7 +154,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/12. i think i got used to my acne.mp3",
+          "https://docs.google.com/uc?export=open&id=1so7ceUiTue3o7dZSLPnBX5PyG4KlE4Z2",
           title: "“i think i got ᶙsed to my acne”",
           artist: "vallenteen",
           coverArt: this.coverArts[11],
@@ -164,7 +164,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/13. not another sad song.mp3",
+          "https://docs.google.com/uc?export=open&id=1Wt28R4Ez8uXuDASu3_Tze_dEqE8dQSvL",
           title: "“not anotḫer sad song”",
           artist: "vallenteen",
           coverArt: this.coverArts[12],
@@ -174,7 +174,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/14. when ỿou_re feeling a bit homesick.mp3",
+          "https://docs.google.com/uc?export=open&id=1upJe8eRjafYHFS4QL93ri9BRETmifgUv",
           title: "“when ỿou're feeling a bit homesick”",
           artist: "vallenteen",
           coverArt: this.coverArts[13],
@@ -184,7 +184,7 @@ export class CloudService {
         },
         {
           url:
-          "../assets/music/15. letting go of the past.mp3",
+          "https://docs.google.com/uc?export=open&id=1-Bnxs9rYh9C3mBJJs7MMLpsH496-s3I4",
           title: "“letting gɵ of the past”",
           artist: "vallenteen",
           coverArt: this.coverArts[14],

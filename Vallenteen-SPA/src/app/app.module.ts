@@ -4,7 +4,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +14,6 @@ import { NavMusicPlayerComponent } from './nav-music-player/nav-music-player.com
 import { SafeStylePipe} from './_helpers/safe-style.pipe';
 import { MaterialModule } from './material.module';
 import { ClickToPlayComponent } from './home/click-to-play/click-to-play.component';
-import { AlertsComponent } from './_alerts/alerts.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -41,7 +40,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       NavMusicPlayerComponent,
       SafeStylePipe,
       ClickToPlayComponent,
-      AlertsComponent,
       MainMenuComponent,
       FooterComponent,
       HomeComponent,
